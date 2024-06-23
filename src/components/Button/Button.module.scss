@@ -1,0 +1,30 @@
+@import "@scss/variables.scss";
+@import "@scss/colors.scss";
+@import "@scss/breakpoints.scss";
+
+.button {
+	background-color: $button-background-color;
+	color: $button-text-color;
+	padding: 1rem 2rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $button-hover-color;
+	}
+
+	&:not(:last-child) {
+		margin-right: 1rem;
+
+		@include breakpoint(medium) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&:disabled {
+		background-color: $table-border-color;
+		cursor: not-allowed;
+	}
+}

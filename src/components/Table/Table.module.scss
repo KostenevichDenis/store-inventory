@@ -1,0 +1,62 @@
+@import "@scss/colors.scss";
+@import "@scss/variables.scss";
+@import "@scss/breakpoints.scss";
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid $table-border-color;
+	margin-bottom: 2rem;
+
+	thead {
+		background-color: $table-header-background-color;
+	}
+
+	th, td {
+		border: 1px solid $table-border-color;
+		padding: 1rem;
+		background-color: $table-row-background-color;
+	}
+
+	th {
+		background-color: $table-header-background-color;
+	}
+
+	td {
+		text-align: center;
+	}
+
+	.action {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.action button {
+		background-color: $link-color;
+		color: $background-color;
+		padding: 1rem 2rem;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $link-hover-color;
+		}
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+
+			@include breakpoint(medium) {
+				margin-right: 0;
+				margin-bottom: 1rem;
+			}
+		}
+
+		&:disabled {
+			background-color: $table-border-color;
+			cursor: not-allowed;
+		}
+	}
+}

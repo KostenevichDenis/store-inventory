@@ -1,0 +1,45 @@
+@import "@scss/colors.scss";
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.inventory-form  {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: $header-footer-background;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	min-height: 25rem;
+	margin-bottom: 2rem;
+
+	.field {
+		width: 90%;
+		margin-bottom: 2rem;
+		max-width: 60rem;
+		position: relative;
+
+		.validation-error {
+			color: $error-color;
+			font-size: 1.5rem;
+			position: absolute;
+			bottom: -2rem;
+		}
+	}
+
+	input, select {
+		width: 100%;
+		font-size: 1.5rem;
+		padding: 0.5rem;
+	}
+
+	
+}
